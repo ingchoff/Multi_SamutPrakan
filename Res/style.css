@@ -44,7 +44,7 @@
     margin: auto;
     display: block;
     opacity: 0.8;
-    filter:blur(2px);
+    filter:blur(2.9px);
 }
 
 #cover1 {
@@ -166,19 +166,40 @@ div.desc {
 }
 .header {
     font-family: 'SanamDeklenchaya';
-    font-size: 55px;
+    font-size: 75px;
     color: white;
     text-shadow: 5px 3px 12px rgba(0,0,0,0.15);
 }
 
-.myPic img {
+#pic1 {
+    max-width: 60%;
+    height: auto;
+    margin: 15px auto 20px auto;
+    display: block;
+    border-radius: 20px;
+}
+
+#pic2 {
     max-width: 55%;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    margin-left: 15px;
     border-radius: 20px;
+    float: right;
+}
+.myPic1 img{
+     max-width: 45%;
+     height: auto;
+     display: inline-block;
+     margin: 15px;
+     border-radius: 20px;
+}
+.myPic2 img{
+     max-width: 58%;
+     height: auto;
+     display: block;
+     margin: auto;
+     border-radius: 20px;
 }
 
 /*config FirstPage*/
