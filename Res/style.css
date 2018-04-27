@@ -2,6 +2,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+}
+/*/#myPic1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}/*/
 @font-face {
   font-family: 'SanamDeklenchaya';
   src: url('font/SanamDeklenchaya.eot?#iefix') format('embedded-opentype'),  url('font/SanamDeklenchaya.woff') format('woff'), url('font/SanamDeklenchaya.ttf')  format('truetype'), url('font/SanamDeklenchaya.svg#SanamDeklenchaya') format('svg');
@@ -15,9 +19,26 @@
   font-style: normal;
 }
 
+.navbar {
+}
+
+.navbar-header a{
+    font-family: 'WRTishkid';
+    font-size: 28px;
+}
+#myNavbar li{
+    font-family: 'WRTishkid';
+    font-size: 22px;
+    float:none !important;
+    display:inline-block !important;
+}
 #mySidebar {
     background-color: black;
 }
+#mySidebar button{
+    margin-top: 52px;
+}
+
 
 .font_article {
     font-family: 'Itim', cursive;
@@ -141,6 +162,7 @@ div.desc {
 
 /*SideNav*/
 #openNav {
+    margin-top: 80px;
     width: 100px;
     position: fixed;
     z-index: 1;
@@ -166,7 +188,7 @@ div.desc {
 }
 .header {
     font-family: 'SanamDeklenchaya';
-    font-size: 75px;
+    font-size: 5.5vw;
     color: white;
     text-shadow: 5px 3px 12px rgba(0,0,0,0.15);
 }
@@ -198,14 +220,15 @@ div.desc {
     margin-bottom: 50px;
 }
 
-.myPic1 img{
-     max-width: 45%;
+#myPic1 img{
+     max-width: 60%;
      height: auto;
-     display: inline-block;
-     margin: 15px;
+     display: block;
+     margin: auto;
+     margin-bottom: 20px;
      border-radius: 20px;
 }
-.myPic2 img{
+#myPic2 img{
      max-width: 60%;
      height: auto;
      display: block;

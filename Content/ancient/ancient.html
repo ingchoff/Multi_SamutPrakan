@@ -5,51 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../Res/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Itim|Trirong" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
     <script src="../../Res/myscripts.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add scrollspy to <body>
+          $('body').scrollspy({target: ".navbar", offset: 50});
+
+          // Add smooth scrolling on all links inside the navbar
+          $("#myNavbar a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            }  // End if
+          });
+        });
+    </script>
+
 </head>
 <body>
     <!-- Sidebar -->
     <div class="w3-sidebar w3-bar-block w3-animate-left w3-row" style="display:none;z-index:5" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-sand text-center" onclick="myClose()">Close &times;</button>
-        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a><br>
+        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a><br>
         <div class="w3-dropdown-hover w3-bar-block">
-          <a class="w3-button w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
+          <a class="w3-margin-left w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
             <i class="fa fa-caret-down"></i>
           </a>
           <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
-            <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-black w3-large">พิพิธภัณฑ์ช้างเอราวัณ
+            <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">พิพิธภัณฑ์ช้างเอราวัณ
 </a>
-            <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-black w3-large">ฟาร์มจรเข้</a>
-            <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-black w3-large">สถานตากอากาศบางปู
+            <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">ฟาร์มจรเข้</a>
+            <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">สถานตากอากาศบางปู
 </a>
           </div>
         </div>
     </div>
-    <button id="openNav" style="visibility: visible;" class="w3-margin-top w3-button w3-black w3-xlarge" onclick="myOpen()">☰</button>
     <!-- Page Content -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html"><b>Sumut Prakan</b></a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#pic2">Section 1</a></li>
+                        <li><a href="#myPic1">Section 2</a></li>
+                        <li><a href="#myPic2">Section 3</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#section41">Section 4-1</a></li>
+                                <li><a href="#section42">Section 4-2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <button id="openNav" style="visibility: visible;" class="w3-button w3-orange w3-xlarge" onclick="myOpen()">☰</button>
     <div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
     <div class="w3-display-container w3-margin-bottom w3-grayscale-min"><img id="cover-ancient" class="img-thumbnail"
                                                             src="../../Res/cover-anc.jpg">
         <div align="center" class="header w3-display-middle"><b>เมืองโบราณ</b></div>
     </div>
     <div id="container">
-        <img id="pic1" src="y9.jpg"><br>
-        <img id="pic2" src="mh2.jpg" alt="map"><br><br>
-        <p>&emsp;เมืองโบราณ สมุทรปราการ อีกหนึ่งสถานที่ท่องเที่ยว อันทรงคุณค่า ซึ่งอยู่ไม่ไกลกรุงเทพฯ มีสิ่งที่น่าสนใจมากมาย บรรยากาศร่มรื่นและผ่อนคลาย เที่ยวกันได้ทั้งครอบครัว สามารถเที่ยวกันได้ง่าย ๆ ในวันหยุดสุดสัปดาห์<br><br>&emsp;เมืองโบราณ สมุทรปราการ ตั้งอยู่ที่ 296/1 หมู่ 7 ถนนสุขุมวิท ตำบลบางปูใหม่ อำเภอเมืองสมุทรปราการ ก่อตั้งโดย คุณเล็ก วิริยะพันธุ์ เริ่มการก่อสร้างในปี พ.ศ. 2506 มีพื้นที่ทั้งหมดราว ๆ 800 ไร่ ซึ่งหากมองจากแผนที่จะเห็นว่าพื้นที่ทั้งหมดของเมืองโบราณมีรูปร่างคล้ายกับขวาน ซึ่งคล้ายกับแผนที่ประเทศไทยนั่นเอง</p>
-        <p>&emsp;ภายในเมืองโบราณ สมุทรปราการ ได้มีการจำลองงานสถาปัตยกรรมอันสวยงามและทรงคุณค่าของไทยไว้มากมาย ซึ่งมีทั้งสถาปัตยกรรมที่รื้อถอนจากของจริงมาปลูกสร้าง จำลองจากขนาดจริงหรือเล็กกว่ามาสร้าง และใช้องค์ความรู้มาสร้างสรรค์ขึ้นใหม่</p><br><br><br><br><br><br><br><br><br>
-        <div class="myPic1">
-            <img id="pic3" src="y1.jpg">
-            <img id="pic4" src="y7.jpg">
-        <p>&emsp;นักท่องเที่ยวจะได้ตื่นตาตื่นใจไปกับสถาปัตยกรรมที่สวยงามมากมาย ซึ่งมีมากกว่า 100 รูปแบบ และยังมีให้ชมครบทั้ง 4 ภาคจากทั่วไทย สิ่งที่น่าสนใจ เช่น พระที่นั่งสรรเพชญปราสาทจำลอง, ศาลาพระอรหันต์, เขาพระสุเมรุ, วิหารวัดภูมินทร์ น่าน, เรือนทับขวัญ, คุ้มขุนแผน, สวนรามเกียรติ์, วัดจองคำ ลำปาง, วิหารสุโขทัย, พระมหาธาตุเจดีย์ สุโขทัย,  พระธาติจอมกิตติ จังหวัดเชียงราย, ปราสาทหินพนมรุ้ง, ปราสาทหินพิมาย, ศาลาโถงวัดนิมิตร ตราด, เรือสำเภาไทย ฯลฯ เรียกได้ว่ามาเที่ยวที่เดียว ก็เหมือนได้เที่ยวไปทั่วประเทศไทยเลยทีเดียว</p><br>
+            <img id="pic1" src="y9.jpg"><br>
+        <div id="section1">
+            <img id="pic2" src="mh2.jpg" alt="map"><br><br><br><br>
+            <p>&emsp;เมืองโบราณ สมุทรปราการ อีกหนึ่งสถานที่ท่องเที่ยว อันทรงคุณค่า ซึ่งอยู่ไม่ไกลกรุงเทพฯ มีสิ่งที่น่าสนใจมากมาย บรรยากาศร่มรื่นและผ่อนคลาย เที่ยวกันได้ทั้งครอบครัว สามารถเที่ยวกันได้ง่าย ๆ ในวันหยุดสุดสัปดาห์<br><br>&emsp;เมืองโบราณ สมุทรปราการ ตั้งอยู่ที่ 296/1 หมู่ 7 ถนนสุขุมวิท ตำบลบางปูใหม่ อำเภอเมืองสมุทรปราการ ก่อตั้งโดย คุณเล็ก วิริยะพันธุ์ เริ่มการก่อสร้างในปี พ.ศ. 2506 มีพื้นที่ทั้งหมดราว ๆ 800 ไร่ ซึ่งหากมองจากแผนที่จะเห็นว่าพื้นที่ทั้งหมดของเมืองโบราณมีรูปร่างคล้ายกับขวาน ซึ่งคล้ายกับแผนที่ประเทศไทยนั่นเอง</p>
+            <p>&emsp;ภายในเมืองโบราณ สมุทรปราการ ได้มีการจำลองงานสถาปัตยกรรมอันสวยงามและทรงคุณค่าของไทยไว้มากมาย ซึ่งมีทั้งสถาปัตยกรรมที่รื้อถอนจากของจริงมาปลูกสร้าง จำลองจากขนาดจริงหรือเล็กกว่ามาสร้าง และใช้องค์ความรู้มาสร้างสรรค์ขึ้นใหม่</p><br><br><br><br><br><br><br><br><br>
         </div>
-        <div class="myPic2">
+        <div id="myPic1">
+            <img src="y1.jpg">
+            <img src="y7.jpg">
+        <p id="text2">&emsp;นักท่องเที่ยวจะได้ตื่นตาตื่นใจไปกับสถาปัตยกรรมที่สวยงามมากมาย ซึ่งมีมากกว่า 100 รูปแบบ และยังมีให้ชมครบทั้ง 4 ภาคจากทั่วไทย สิ่งที่น่าสนใจ เช่น พระที่นั่งสรรเพชญปราสาทจำลอง, ศาลาพระอรหันต์, เขาพระสุเมรุ,
+            วิหารวัดภูมินทร์ น่าน, เรือนทับขวัญ, คุ้มขุนแผน, สวนรามเกียรติ์, วัดจองคำ ลำปาง, วิหารสุโขทัย, พระมหาธาตุเจดีย์ สุโขทัย,  พระธาติจอมกิตติ จังหวัดเชียงราย, ปราสาทหินพนมรุ้ง, ปราสาทหินพิมาย, ศาลาโถงวัดนิมิตร ตราด, เรือสำเภาไทย ฯลฯ เรียกได้ว่ามาเที่ยวที่เดียว
+        </p><br>
+        </div>
+        <div id="myPic2">
             <img src="y11.jpg"><br>
             <p>&emsp;เมืองโบราณ สมุทรปราการ ได้มีการจัดสรรพื้นที่อย่างดี ปรับภูมิทัศน์โดยรอบให้สวยงาม รายล้อมไปด้วยสระน้ำและสวนสวยสีเขียวขจีสุดร่มรื่น มีถนนลาดยางอย่างดีให้นักท่องเที่ยวสามารถขับรถยนต์เที่ยวเองได้ หรือใครจะขี่จักรยานชิล ๆ เที่ยวชมที่นี่ก็ได้เช่นกัน ส่วนถ้าใครอยากได้ความรู้ไปด้วยก็จะมีรถรางของเมืองโบราณไว้บริการ หรือถ้าอยากส่วนตัวหน่อยก็มีรถกอล์ฟไว้ให้เช่ากันด้วย</p><br>
             <img src="y13.jpg"><br>
