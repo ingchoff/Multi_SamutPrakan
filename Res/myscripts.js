@@ -21,6 +21,5 @@ function myClose() {
 }
 function myShow() {
     document.getElementById("openNav").style.visibility = "visible";
-    // document.getElementById("FirstPage").style.display = "none";
     document.getElementById("demo1").style.display = "block";
 }

@@ -5,7 +5,6 @@
 body {
     position: relative;
 }
-/*/#myPic1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}/*/
 @font-face {
   font-family: 'SanamDeklenchaya';
   src: url('font/SanamDeklenchaya.eot?#iefix') format('embedded-opentype'),  url('font/SanamDeklenchaya.woff') format('woff'), url('font/SanamDeklenchaya.ttf')  format('truetype'), url('font/SanamDeklenchaya.svg#SanamDeklenchaya') format('svg');
@@ -46,10 +45,6 @@ body {
     color: black;
     text-shadow: 5px 3px 12px rgba(0,0,0,0.15);
 
-}
-
-#FirstPage {
-    margin-bottom: 20px;
 }
 
 .page1 {
@@ -246,11 +241,10 @@ div.desc {
 
 /*config FirstPage*/
 .carousel-inner img {
-            max-height: 720px; 
-            margin: 15px auto;
+            height: 720px;
+            margin: 20px auto;
             display: block;
-            border-radius: 30px;
-            opacity: 0.85;
+            border-radius: 20px;
         }
 
         .btn {
