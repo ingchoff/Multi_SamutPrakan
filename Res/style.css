@@ -2,6 +2,12 @@
   scroll-behavior: smooth;
 }
 
+.scrollspy-example {
+    height: 400px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 body {
     position: relative;
 }
@@ -18,19 +24,16 @@ body {
   font-style: normal;
 }
 
-.navbar {
-}
-
-.navbar-header a{
+.navbar a{
     font-family: 'WRTishkid';
-    font-size: 28px;
+    font-size: 25px;
 }
-#myNavbar li{
+/*/#myNavbar li{
     font-family: 'WRTishkid';
     font-size: 22px;
     float:none !important;
     display:inline-block !important;
-}
+}/*/
 #mySidebar {
     background-color: black;
 }
