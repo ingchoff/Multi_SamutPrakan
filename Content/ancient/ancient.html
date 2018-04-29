@@ -111,10 +111,38 @@
             <p><b>ติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่:</b><br>โทรศัพท์: 02 709 1644<br>
                 <b>อัตราค่าบริการสำหรับบุคคลทั่วไป:</b><br> เที่ยวชม ตั้งแต่เวลา 09.00-16.00 น. ผู้ใหญ่ ท่านละ 350 บาท<br>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
                 เที่ยวชม ตั้งแต่เวลา 16.00 น. ลด 50% ผู้ใหญ่ ท่านละ 175 บาท เด็ก(6-14ปี) ท่านละ 80 บาท เด็ก(6-14ปี) ท่านละ 175 บาท<br></p>
-        </div>
-        <div id="Map">
+        </div><br><br>
+        <!-- MAP -->
+        <div id="map"></div>
+        <script>
 
-        </div>
+            function initMap() {
+                var mapOptions = {
+                  center: new google.maps.LatLng(13.5392949, 100.6229307),
+                  zoom: 14,
+                }
+                    
+                var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
+
+                var marker, info;
+
+                            marker = new google.maps.Marker({
+                               position: new google.maps.LatLng(13.5392949, 100.6229307),
+                               map: maps,
+                            });
+
+                          info = new google.maps.InfoWindow();
+
+                          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                            return function() {
+                              info.setContent("เมืองโบราณ");
+                              info.open(maps, marker);
+                            }
+                          })(marker, i));
+
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MZdEIb2nLuLBj3LFPdrGix1Ag4SwPy8&callback=initMap" async defer></script>
     </div>
 </body>
 </html>

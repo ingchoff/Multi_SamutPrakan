@@ -49,6 +49,40 @@
         <p>&emsp;ส่วนชั้นใต้ดินที่เรียกว่า "ชั้นบาดาล"เป็นที่จัดแสดงนิทรรศการและโบราณวัตถุจำนวนมาก อาทิ พระพุทธรูปเทวรูปสมัยต่าง ๆ และเครื่องลายครามของจีนระเบียงรอบนอกตัวอาคารประกอบด้วยซุ้มแปดซุ้มรอบพิพิธภัณฑ์เป็นอุทยานพรรณไม้ในวรรณคดีและพันธุ์ไม้หายากจากทุกภูมิภาคของประเทศมีงานประติมากรรมลอยตัวเรื่องรามเกียรติ์ วางเรียงรายล้อมรอบอาคาร</p><br>
         <div class="myPic"><img src="banner2.jpg" width="1000" height="400"></div><br>
         <p>&emsp;ทั้งนี้พิพิธภัณฑ์ช้างเอราวัณ (Erawan Museum) ตั้งอยู่บนถนนสุขุมวิทขาเข้าจังหวัดสมุทรปราการ เปิดทำการตั้งแต่เวลา 08.00 – 17.00 น.ค่าบัตรเข้าชมพิพิธภัณฑ์ช้างเอราวัณ โดยไม่เข้าชมภายในตัวพิพิธภัณฑ์(ชมภายในและภายนอกพิพิธภัณฑ์) ผู้ใหญ่ 150 บาท, เด็ก (อายุ 6-15 ปี) 50บาท และถ้าจะสักการะภายในพิพิธภัณฑ์ช้างเอราวัณ ต้องเสียค่าบัตรบำรุง 50บาท (พร้อมดอกไม้ ธูป เทียน) สามารถเดินชมบริเวณสวนได้โดยรอบเปิดสักการะตั้งแต่เวลา 08.00 – 18.00 น. สอบถามเพิ่มเติมได้ที่ โทร. 02371 3135-6 โทรสาร. 0 2380 0304 หรือ <a href="www.erawan-museum.com">www.erawan-museum.com</a></p>
+
+        <!-- MAP -->
+        <div id="map"></div>
+        <script>
+
+            function initMap() {
+                var mapOptions = {
+                  center: new google.maps.LatLng(13.6284867, 100.589072),
+                  zoom: 14,
+                }
+                    
+                var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
+
+                var marker, info;
+
+                            marker = new google.maps.Marker({
+                               position: new google.maps.LatLng(13.6284867, 100.589072),
+                               map: maps,
+                            });
+
+                          info = new google.maps.InfoWindow();
+
+                          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                            return function() {
+                              info.setContent("เมืองโบราณ");
+                              info.open(maps, marker);
+                            }
+                          })(marker, i));
+
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MZdEIb2nLuLBj3LFPdrGix1Ag4SwPy8&callback=initMap" async defer></script>
     </div>
+
+
 </body>
 </html>

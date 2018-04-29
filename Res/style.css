@@ -274,3 +274,10 @@ div.desc {
             color: white;
             box-shadow: 0 22px 26px 0 rgba(0,0,0,0.24),0 27px 60px 0 rgba(0,0,0,0.19);
         }
+
+        #map {
+        height: 800px;
+        width: 1000px;
+        display: inline-block;
+        position: relative
+        }

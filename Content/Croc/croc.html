@@ -103,6 +103,39 @@
                 ถ.สุขุมวิท ต.บางปูใหม่ อ.เมือง จ.สมุทรปราการ 10280<br>
                 โทรศัพท์: 02-323-9911, 02-323-1213</p>
         </div>
+        <br><br>
+
+        <!-- MAP -->
+        <div id="map"></div>
+        <script>
+
+            function initMap() {
+                var mapOptions = {
+                  center: new google.maps.LatLng(13.5720566, 100.5976763),
+                  zoom: 14,
+                }
+                    
+                var maps = new google.maps.Map(document.getElementById("map"),mapOptions);
+
+                var marker, info;
+
+                            marker = new google.maps.Marker({
+                               position: new google.maps.LatLng(13.5720566, 100.5976763),
+                               map: maps,
+                            });
+
+                          info = new google.maps.InfoWindow();
+
+                          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                            return function() {
+                              info.setContent("เมืองโบราณ");
+                              info.open(maps, marker);
+                            }
+                          })(marker, i));
+
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7MZdEIb2nLuLBj3LFPdrGix1Ag4SwPy8&callback=initMap" async defer></script>
     </div>
 </body>
 </html>
