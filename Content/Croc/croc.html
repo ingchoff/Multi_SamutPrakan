@@ -4,46 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../Res/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Itim|Trirong" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../../Res/myscripts.js"></script>
     <title>พาเที่ยว ฟาร์มจรเข้</title>
+    <script>
+        $(document).ready(function(){
+          // Add scrollspy to <body>
+          $('body').scrollspy({target: ".navbar", offset: 50});
+
+          // Add smooth scrolling on all links inside the navbar
+          $("#myNavbar a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            }  // End if
+          });
+        });
+    </script>
 </head>
 <body>
-        <!-- Sidebar -->
+    <!-- Sidebar -->
     <div class="w3-sidebar w3-bar-block w3-animate-left w3-row" style="display:none;z-index:5" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-sand text-center" onclick="myClose()">Close &times;</button>
-        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a>
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
-            <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-black w3-large">พิพิธภัณฑ์ช้างเอราวัณ
-</a>
-            <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-black w3-large">ฟาร์มจรเข้</a>
-            <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-black w3-large">สถานตากอากาศบางปู
-</a>
-          </div>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a><br>
+        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a><br>
+        <div class="w3-dropdown-hover w3-bar-block">
+            <a class="w3-margin-left w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
+                <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">พิพิธภัณฑ์ช้างเอราวัณ
+                </a>
+                <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">ฟาร์มจรเข้</a>
+                <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">สถานตากอากาศบางปู
+                </a>
+            </div>
         </div>
     </div>
-    <button id="openNav" style="visibility: visible;" class="w3-margin-top w3-button w3-white w3-xlarge" onclick="myOpen()">☰</button>
+    <button id="openNav" style="visibility: visible;" class="w3-button danger-color w3-xlarge hoverable" onclick="myOpen()">☰</button>
     <!-- Page Content -->
+    <nav class="navbar navbar-inverse default-color navbar-fixed-top hoverable">
+        <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+        <a class="navbar-brand white-text w3-xxlarge" href="../../index.html"><b>&emsp;&emsp;Sumut Prakan&emsp;&emsp;</b></a>
+        <!--</div>-->
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav nav-pills">
+                <li><a class="white-text hoverable w3-xlarge" href="#pic1">สถานที่</a></li>
+                <li><a class="white-text hoverable w3-xlarge" href="#Info">Information</a></li>
+                <li><a class="white-text hoverable w3-xlarge" href="#">Map</a></li>
+            </ul>
+        </div>
+        <!--</div>-->
+    </nav>
+
     <div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
+    <div class="w3-display-container w3-margin-bottom mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
+                                                                               src="../../Res/cover-anc.jpg">
+        <div align="center" class="header w3-display-middle"><b>ฟาร์มจระเข้และสวนสัตว์</b></div>
+    </div>
     <div id="container">
-        <div align="center"><h1>ฟาร์มจรเข้และสวนสัตว์สมุทรปราการ</h1></div>
-        <p>&emsp;“ฟาร์มจระเข้และสวนสัตว์สมุทรปราการ” เป็นสถานที่เพาะพันธุ์จระเข้ที่ใหญ่ที่สุดในโลก และยังเป็นสถานที่แรกของโลกที่มีการเพาะเลี้ยงเพื่อขยายพันธุ์จระเข้ที่ทันสมัยที่สุด และมีการเพาะพันธุ์จระเข้ทุกสายพันธุ์ที่มีอยู่ในโลกนี้ โดยมีจำนวนจระเข้ในปัจจุบันเกือบถึง 80,000 ตัว ที่มีตั้งแต่ความยาวไม่เกินหนึ่งฟุต จนถึง 6 เมตร โดยเฉพาะจระเข้ขนาดยักษ์ความยาวประมาณ 5 – 6 เมตรนั้นมีจำนวนถึง 5,000 ตัวด้วยกัน ซึ่งเป็นสิ่งที่หาชมได้ยาก  รวมทั้งที่แห่งนี้ยังเป็นสถานที่เพียงแห่งเดียวที่เราจะสามารถศึกษาวงจรชีวิตของจระเข้ได้อย่างละเอียดทุกขั้นตอน นับตั้งแต่การฟักไข่ด้วยวิธีธรรมชาติ และการใช้ห้องฟักไข่ที่ทันสมัยที่สุด ยังมีการอนุบาลลูกจระเข้แรกเกิด ไปจนถึงระยะการเป็นพ่อแม่พันธุ์  โดยที่เราไม่สามารถจะศึกษาหาข้อมูลเหล่านี้จากที่อื่นได้เลยนอกจากที่นี่  อีกทั้งยังมีความแปลกประหลาดของจระเข้ที่ไม่สามารถหาชมได้จากที่อื่น เช่น จระเข้สีทอง จระเข้เผือก จระเข้ 5 ขา จระเข้ 6 ขา จระเข้ไม่มีตา จระเข้ไม่มีหาง จระเข้หลังค่อม ฯลฯ ซึ่งทั้งหมดนี้เราสามารถเดินชมได้ในส่วนจัดแสดงจระเข้ เริ่มตั้งแต่ทางเดินไม้ที่ทอดยาวไปรอบๆ บ่อเลี้ยง และบ่ออนุบาลจระเข้ไล่เรียงไปตามช่วงอายุ จนถึงโซนจัดแสดงจระเข้ประหลาดนั่นเอง</p><br>
-        <div class="myPic"><img src="entrance.jpg"></div><br>
+        <div class="myPic"><img id="pic1" src="entrance.jpg"></div><br>
+        <p>&emsp;“ฟาร์มจระเข้และสวนสัตว์สมุทรปราการ” เป็นสถานที่เพาะพันธุ์จระเข้ที่ใหญ่ที่สุดในโลก และยังเป็นสถานที่แรกของโลกที่มีการเพาะเลี้ยงเพื่อขยายพันธุ์จระเข้ที่ทันสมัยที่สุด และมีการเพาะพันธุ์จระเข้ทุกสายพันธุ์ที่มีอยู่ในโลกนี้ โดยมีจำนวนจระเข้ในปัจจุบันเกือบถึง 80,000 ตัว
+            ที่มีตั้งแต่ความยาวไม่เกินหนึ่งฟุต จนถึง 6 เมตร โดยเฉพาะจระเข้ขนาดยักษ์ความยาวประมาณ 5 – 6 เมตรนั้นมีจำนวนถึง 5,000 ตัวด้วยกัน ซึ่งเป็นสิ่งที่หาชมได้ยาก  รวมทั้งที่แห่งนี้ยังเป็นสถานที่เพียงแห่งเดียวที่เราจะสามารถศึกษาวงจรชีวิตของจระเข้ได้อย่างละเอียดทุกขั้นตอน
+            นับตั้งแต่การฟักไข่ด้วยวิธีธรรมชาติ และการใช้ห้องฟักไข่ที่ทันสมัยที่สุด ยังมีการอนุบาลลูกจระเข้แรกเกิด ไปจนถึงระยะการเป็นพ่อแม่พันธุ์  โดยที่เราไม่สามารถจะศึกษาหาข้อมูลเหล่านี้จากที่อื่นได้เลยนอกจากที่นี่  อีกทั้งยังมีความแปลกประหลาดของจระเข้ที่ไม่สามารถหาชมได้จากที่อื่น
+            เช่น จระเข้สีทอง จระเข้เผือก จระเข้ 5 ขา จระเข้ 6 ขา จระเข้ไม่มีตา จระเข้ไม่มีหาง จระเข้หลังค่อม ฯลฯ ซึ่งทั้งหมดนี้เราสามารถเดินชมได้ในส่วนจัดแสดงจระเข้ เริ่มตั้งแต่ทางเดินไม้ที่ทอดยาวไปรอบๆ บ่อเลี้ยง และบ่ออนุบาลจระเข้ไล่เรียงไปตามช่วงอายุ
+            จนถึงโซนจัดแสดงจระเข้ประหลาดนั่นเอง</p><br><br>
+        <div class="myPic"><img id="pic3" src="ra.jpg"><br><br><img id="pic3" src="monkey.jpg"></div><br>
+        <div class="myPic"><img id="pic3" src="ele.jpg"></div>
         <p>&emsp;นอกจากนี้ภายในฟาร์มจระเข้และสวนสัตว์สมุทรปราการ ยังมีสัตว์และกิจกรรมเพื่อการท่องเที่ยวพักผ่อนหย่อนใจมากมายอีกหลายชนิด เช่น การให้อาหารจระเข้ด้วยตัวเองตามจุดต่างๆ ของบ่อเลี้ยงที่เจ้าหน้าที่จัดเตรียมไว้คอยบริการ หรือบริเวณโซนด้านหน้า ก็จะเป็นส่วนที่จัดเตรียมเสือ และลิงชิมแพนซีไว้ ซึ่งเราสามารถถ่ายรูปคู่ร่วมกับพวกมันได้ โดยเจ้าหน้าที่จะให้การดูแลอย่างใกล้ชิด ส่วนใครที่ชอบสัตว์ตัวเล็กๆ อย่างพวกนกสวยงาม บริเวณใกล้ๆ กันก็มีกรงนกขนาดใหญ่ที่เราสามารถไปเข้าไปดูนกภายใต้บรรยากาศที่แวดล้อมไปด้วยต้นไม้นานาชนิด ตื่นตาตื่นใจไปกับนกหลากหลายสายพันธุ์ และยังสามารถให้อาหารนกได้อย่างใกล้ชิดอีกด้วย ส่วนสัตว์อื่นๆ ที่มีจัดแสดงอยู่ภายในก็มีอีกมากมาย เช่นฮิปโป สิงโต อูฐ เต่า ลิงไทย หมี งู ช้าง ปลา ฯลฯ เรียกว่ามีสัตว์มากมายมหาศาลจริงๆ ถ้าหากจะเดินดูให้ทั่วคงต้องใช้เวลาเกือบจะทั้งวันเลยทีเดียว</p><br>
-        <div class="myPic"><img src="ra.jpg"><br><br><img src="monkey.jpg" width="700" height="467"></div><br>
         <p>&emsp;หลังจากเดินเล่นชมจระเข้ และสัตว์ต่างๆ แล้ว ต้องอย่าลืมแวะเพิ่มความหวาดเสียวด้วยการชม “การแสดงจระเข้” ที่ทั้งแสนจะตื่นเต้นตกใจหวาดเสียว ขอบอกว่าถ้าขวัญอ่อนอย่าดูเลยครับเพราะเขาเอาจระเข้เป็นๆ มาแสดงผาดโผนร่วมกันคน ไม่ต้องบอกหรอกนะครับว่า การเอาแขน ขา หรือแม้กระทั่งหัวใส่เข้าไปในปากจระเข้มันจะน่าหวาดเสียวแค่ไหน ยังไม่นับรวมถึงมุขต่างๆ ระหว่างการแสดงที่สามารถเรียกเสียงหัวเราะ และเสียงกรี๊ดได้ตลอดเวลา ถัดจากการแสดงจระเข้แล้ว อีกหนึ่งการแสดงที่ได้รับความนิยมไม่แพ้กันนั่นก็คือ “การแสดงช้าง” ที่มีช้างไทยมาโชว์ความสามารถให้เราได้อึ้งทึ่งไปกับความน่ารักแสนรู้ของมัน ไม่ว่าจะเป็นการถีบจักรยาน การเดินบนสายสลิง รวมถึงการวาดภาพที่สร้างความประทับใจให้กับนักท่องเที่ยวทั้งชาวไทยและชาวต่างชาติเป็นอย่างมาก</p><br>
-        <div class="myPic"><img src="ele.jpg"></div><br>
-        <p>ฟาร์มจรเข้ตั้งอยู่ที่ 555 หมู่ 7 ถนนท้ายบ้าน อำเภอเมือง จังหวัดสมุทรปราการ ติดต่อได้ที่ เบอร์โทร 027034891-5</p>
+        <!--<div class="Info"><p>ฟาร์มจรเข้ตั้งอยู่ที่ 555 หมู่ 7 ถนนท้ายบ้าน อำเภอเมือง จังหวัดสมุทรปราการ ติดต่อได้ที่ เบอร์โทร 027034891-5</p></div>-->
+        <div style="margin-top: 350px;" id="Info">
+            <p><b>เวลาทำการ</b><br>
+                บริเวณสะพานเปิดให้เข้าชมทุกวัน<br>
+                ส่วนร้านอาหารศาลาสุขใจ<br>เปิดบริการทุกวัน เวลา 10.00 - 20.00 น.<br></p>
+            <p><b>ติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่</b><br>กองสถานพักผ่อน กรมพลาธิการทหารบก<br>
+                ถ.สุขุมวิท ต.บางปูใหม่ อ.เมือง จ.สมุทรปราการ 10280<br>
+                โทรศัพท์: 02-323-9911, 02-323-1213</p>
+        </div>
     </div>
 </body>
 </html>

@@ -4,39 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../Res/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Itim|Trirong" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../../Res/myscripts.js"></script>
     <title>พาเที่ยว สถานตากอากาศบางปู</title>
+    <script>
+        $(document).ready(function(){
+          // Add scrollspy to <body>
+          $('body').scrollspy({target: ".navbar", offset: 50});
+
+          // Add smooth scrolling on all links inside the navbar
+          $("#myNavbar a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            }  // End if
+          });
+        });
+    </script>
 </head>
 <body>
     <!-- Sidebar -->
     <div class="w3-sidebar w3-bar-block w3-animate-left w3-row" style="display:none;z-index:5" id="mySidebar">
         <button class="w3-bar-item w3-button w3-large w3-sand text-center" onclick="myClose()">Close &times;</button>
-        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a>
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
-            <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-black w3-large">พิพิธภัณฑ์ช้างเอราวัณ
-</a>
-            <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-black w3-large">ฟาร์มจรเข้</a>
-            <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-black w3-large">สถานตากอากาศบางปู
-</a>
-          </div>
+        <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a><br>
+        <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a><br>
+        <div class="w3-dropdown-hover w3-bar-block">
+            <a class="w3-margin-left w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
+                <a href="../พิพิธภัณฑ์ช้างเอราวัณ/era.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">พิพิธภัณฑ์ช้างเอราวัณ
+                </a>
+                <a href="../ฟาร์มจรเข้/croc.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">ฟาร์มจรเข้</a>
+                <a href="../สถาน/bird.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">สถานตากอากาศบางปู
+                </a>
+            </div>
         </div>
     </div>
-    <button id="openNav" style="visibility: visible;" class="w3-button w3-black w3-xlarge" onclick="myOpen()">☰</button>
     <!-- Page Content -->
+    <nav class="navbar navbar-inverse default-color navbar-fixed-top hoverable">
+        <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+        <a class="navbar-brand white-text w3-xxlarge" href="../../index.html"><b>&emsp;&emsp;Sumut Prakan&emsp;&emsp;</b></a>
+        <!--</div>-->
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav nav-pills">
+                <li><a class="white-text hoverable w3-xlarge" href="#pic1">สถานที่</a></li>
+                <li><a class="white-text hoverable w3-xlarge" href="#Info">Information</a></li>
+                <li><a class="white-text hoverable w3-xlarge" href="#">Map</a></li>
+            </ul>
+        </div>
+        <!--</div>-->
+    </nav>
+
+    <button id="openNav" style="visibility: visible;" class="w3-button danger-color w3-xlarge hoverable" onclick="myOpen()">☰</button>
     <div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
+    <div class="w3-display-container w3-margin-bottom mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
+                                                                               src="../../Res/cover-anc.jpg">
+        <div align="center" class="header w3-display-middle"><b>สถานตากอากาศบางปู</b></div>
+    </div>
     <div id="container">
-        <div align="center" class="header">สถานตากอากาศบางปู</div>
         <img id="pic1" src="entrance.jpg"><br>
         <img id="pic2" src="1.jpg"><br>
         <img id="pic3" src="2.jpg">
@@ -49,13 +96,16 @@
             <img src="3.jpg"><br>
             <img src="4.jpg"><br><br><br>
         </div>
-        <div class="Info">
+        <div id="Info">
             <p><b>เวลาทำการ</b><br>
                 บริเวณสะพานเปิดให้เข้าชมทุกวัน<br>
                 ส่วนร้านอาหารศาลาสุขใจ<br>เปิดบริการทุกวัน เวลา 10.00 - 20.00 น.<br></p>
             <p><b>ติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่</b><br>กองสถานพักผ่อน กรมพลาธิการทหารบก<br>
             ถ.สุขุมวิท ต.บางปูใหม่ อ.เมือง จ.สมุทรปราการ 10280<br>
             โทรศัพท์: 02-323-9911, 02-323-1213</p>
+        </div>
+        <div id="Map">
+
         </div>
     </div>
 </body>

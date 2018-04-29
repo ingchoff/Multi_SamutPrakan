@@ -26,7 +26,6 @@ body {
 
 .navbar a{
     font-family: 'WRTishkid';
-    font-size: 25px;
 }
 /*/#myNavbar li{
     font-family: 'WRTishkid';
@@ -233,12 +232,11 @@ div.desc {
      margin: auto;
      border-radius: 20px;
 }
-.Info {
+#Info {
     background-color: #ffffff;
-    opacity: 0.6;
     box-shadow: 10px 10px 20px red;
 }
-.Info p {
+#Info p {
     color: black;
 }
 
