@@ -264,7 +264,7 @@ div.desc {
             z-index: 0;
         }
         .btn {
-            background-color: white; 
+            background-color: black;
             color: black; 
             border: 5px solid #f44336;
             border-radius: 5px;
@@ -277,7 +277,7 @@ div.desc {
 
         #map {
         height: 800px;
-        width: 1000px;
-        display: inline-block;
-        position: relative
+        max-width: 1000px;
+        display: block;
+        position: relative;
         }
