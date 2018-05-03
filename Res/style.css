@@ -434,7 +434,7 @@
     .parallax8 {
         background-image: url('../Content/Croc/para1.jpg');
             /* Full height */
-            min-height: 600px;
+            height: 800px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
