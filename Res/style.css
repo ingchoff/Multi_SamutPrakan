@@ -8,8 +8,9 @@
             scroll-behavior: smooth;
         }
 
-        body {
+        body, html{
             position: relative;
+            height: 100%;
         }
         @font-face {
           font-family: 'SanamDeklenchaya';
@@ -114,7 +115,7 @@
             border: 1px solid #777;
             -ms-transform: scale(1.5); /* IE 9 */
             -webkit-transform: scale(1.5); /* Safari 3-8 */
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
 
         div.gallery img {
@@ -178,19 +179,16 @@
         }
 
         #container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 100px 20px 100px;
-            border: 1px solid #999;
-            border-top-width: 1px;
+            margin: auto;
+            border: 0px solid #999;
+            border-top-width: 0px;
             border-top-style: solid;
             border-top-color: rgb(204, 204, 204);
-            border-top: 0;
             position: relative;
         }
         #container p {
-            font-family: 'Itim', cursive;
-            font-size: 20px;
+            font-family: 'Trirong', cursive;
+            font-size: 22px;
         }
         .header {
             font-family: 'SanamDeklenchaya';
@@ -238,15 +236,26 @@
              max-width: 60%;
              height: auto;
              display: block;
-             margin: auto;
+             margin: auto auto 30px auto;
              border-radius: 20px;
         }
         #Info {
+            border-radius:10px;
+            max-width: 950px;
+            margin-top: 180px;
             background-color: #ffffff;
-            box-shadow: 10px 10px 20px red;
+            transition: transform .2s;
+            box-shadow: 0 22px 26px 0 rgba(0,0,0,0.24),0 27px 60px 0 rgba(0,0,0,0.19);
+        }
+        #Info:hover {
+            -ms-transform: scale(1.5); /* IE 9 */
+            -webkit-transform: scale(1.5); /* Safari 3-8 */
+            transform: scale(1.1);
         }
         #Info p {
             color: black;
+            font-family: 'WRTishkid';
+            font-size: 24px;
         }
 
         /*config FirstPage*/
@@ -289,30 +298,33 @@
                 max-width: 750px;
                 display: block;
                 margin: auto;
-                margin-bottom: 50px;
+                margin-bottom: 0px;
                 position: relative;
+                box-shadow: 5px 10px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.19);
                 }
     #video1 {
-        margin-left: 85px;
         width: 800px;
         border-radius: 20px;
-        display: block:
-        margin: auto;
-        margin-bottom:50px;
+        display: block;
     }
     .warp {
         margin-bottom: 85px;
+        background-color: black;
     }
 
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
-        max-width: 480px;
+        max-width: 380px;
         border-radius: 7px;
         transition: transform .2s;
         margin: auto;
         margin-bottom: 50px;
         display: block;
+    }
+    .card img{
+        width: 600px;
+        height: 400px;
     }
 
     .card:hover {
@@ -330,7 +342,155 @@
     }
 
     .back {
-        background: url("3.1.jpg");
+        background: url("../Content/About/cover.jpg");
         width: 100%;
         background-size: cover;
+    }
+
+    .parallax {
+        background-image: url('cover.jpg');
+        /* Full height */
+        min-height: 600px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .parallax2 {
+        background-image: url('3.jpg');
+        /* Full height */
+        height: 800px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 1px;
+    }
+    .parallax3 {
+        /*/background-image: url('../Content/ancient/y1.jpg');/*/
+        /* Full height */
+        min-height: 600px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom:1px;
+    }
+    .parallax4 {
+    background-image: url('../Content/Bird/14.jpg');
+        /* Full height */
+        min-height: 600px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom:1px;
+    }
+    .parallax5 {
+        background-image: url('../Content/Bird/15.jpg');
+            /* Full height */
+            height: 800px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax6 {
+        background-image: url('../Content/Bird/5.jpg');
+            /* Full height */
+            min-height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax7 {
+        background-image: url('../Content/Croc/para1.jpg');
+            /* Full height */
+            height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax8 {
+        background-image: url('../Content/Croc/para1.jpg');
+            /* Full height */
+            min-height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax9 {
+        background-image: url('../Content/Croc/para2.jpg');
+            /* Full height */
+            min-height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax10 {
+        background-image: url('../Content/Erawan/para2.jpg');
+            /* Full height */
+            min-height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax11 {
+        background-image: url('../Content/Erawan/para1.jpg');
+            /* Full height */
+            min-height: 800px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+    .parallax12 {
+        background-image: url('../Content/Erawan/para1.jpg');
+            /* Full height */
+            min-height: 600px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom:1px;
+    }
+
+    #section1 {
+        padding: 1px 150px 1px 150px;
     }
