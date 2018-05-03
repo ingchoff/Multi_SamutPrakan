@@ -319,8 +319,10 @@
         border-radius: 7px;
         transition: transform .2s;
         margin: auto;
+        margin-left: 60px;
         margin-bottom: 50px;
-        display: block;
+        display: inline-block;
+        position:relative;
     }
     .card img{
         width: 600px;
@@ -346,6 +348,7 @@
         width: 100%;
         background-size: cover;
         padding-bottom: 1px;
+        text-align: center;
     }
 
     .parallax {
