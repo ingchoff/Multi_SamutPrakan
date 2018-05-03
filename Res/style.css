@@ -27,6 +27,14 @@
         .navbar a{
             font-family: 'WRTishkid';
         }
+        #navbar {
+          background-color: #333;
+          position: fixed;
+          top: -50px;
+          width: 100%;
+          display:block;
+          transition: top 0.3s;
+        }
         /*/#myNavbar li{
             font-family: 'WRTishkid';
             font-size: 22px;
@@ -171,9 +179,7 @@
 
         #container {
             max-width: 1200px;
-            box-sizing: border-box;
             margin: 0 auto;
-            overflow: hidden;
             padding: 20px 100px 20px 100px;
             border: 1px solid #999;
             border-top-width: 1px;
@@ -287,13 +293,12 @@
                 position: relative;
                 }
     #video1 {
-        margin-left: 80px;
-        width: 850px;
+        margin-left: 85px;
+        width: 800px;
         border-radius: 20px;
         display: block:
         margin: auto;
         margin-bottom:50px;
-        margin-top:50px;
     }
     .warp {
         margin-bottom: 85px;
@@ -325,7 +330,7 @@
     }
 
     .back {
-        background: url("3.jpg");
+        background: url("3.1.jpg");
         width: 100%;
         background-size: cover;
     }

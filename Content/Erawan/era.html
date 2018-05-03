@@ -40,6 +40,15 @@
             }  // End if
           });
         });
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
     </script>
 </head>
 <body>
@@ -62,15 +71,12 @@
         </div>
     </div>
     <!-- Page Content -->
-    <nav class="navbar navbar-inverse red lighten-1 navbar-fixed-top hoverable">
-        <!--<div class="container-fluid">-->
-        <!--<div class="navbar-header">-->
+    <nav id="navbar" class="navbar navbar-inverse red lighten-1 navbar-fixed-top hoverable">
         <a class="navbar-brand white-text w3-xxlarge" href="../../index.html"><b>&emsp;&emsp;Sumut Prakan&emsp;&emsp;</b></a>
-        <!--</div>-->
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav nav-pills">
+                <li><a class="white-text hoverable w3-xlarge active" href="#cover-ancient">VDO</a></li>
                 <li><a class="white-text hoverable w3-xlarge" href="#warp0">สถานที่</a></li>
-                <li><a class="white-text hoverable w3-xlarge" href="#warp1">VDO</a></li>
                 <li><a class="white-text hoverable w3-xlarge" href="#warp2">Information</a></li>
                 <li><a class="white-text hoverable w3-xlarge" href="#warp3">Map</a></li>
             </ul>
@@ -79,11 +85,14 @@
     </nav>
     <button id="openNav" style="visibility: visible;" class="w3-button info-color w3-xlarge" onclick="myOpen()">☰</button>
     <div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
-    <div class="w3-display-container w3-margin-bottom mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
+    <div class="w3-display-container mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
                                                                                src="../../Res/cover-anc.jpg">
         <div align="center" class="header w3-display-middle"><b>พิพิธภัณฑ์ช้างเอราวัณ</b></div>
     </div>
     <div id="container">
+        <video id="video1" class="video-fluid hoverable" onmouseover="this.play()" onmouseout="this.pause()" poster="../../Res/thumbnail.jpg">
+            <source src="https://drive.google.com/uc?export=download&id=1sIDf5Bdek8TF3HVCEcnOZAziebyDqoZh" type="video/mp4" />
+        </video>
         <div id="warp0" style="margin-bottom:60px;"></div>
         <img id="pic1" src="era1.jpg"><br>
         <p>&emsp;ช้างเอราวัณถือเป็นสิ่งศักดิ์สิทธิ์ที่ผู้คนนิยมเดินทางไปสักการะบูชาตั้งอยู่ริมถนนสุขุมวิท ก่อนเข้าตัวเมืองปากน้ำ ในเนื้อที่ 12 ไร่ของบริษัท ธนบุรีประกอบยนต์ จำกัด ตำบลบางเมืองใหม่เป็นงานปฏิมากรรมลอยตัว ความสูงเทียบเท่าตึก 17 ชั้นสูงจากฐานอาคารถึงหัวช้าง 42 เมตรตัวช้างทำด้วยโลหะทองแดงเคาะด้วยมือทั้งหมด</p>
@@ -96,10 +105,6 @@
         <p>&emsp;<br><br><br>อาคารศาลาการตกแต่งเป็นการผสมผสานศิลปะหลากหลายรูปแบบ เช่นการใช้กระจกสีแบบศิลปะตะวันตก, เครื่องเบญจรงค์สลับลวดลายสอดสี,การดุนโลหะบนแผ่นดีบุกของช่างเมืองนครศรีธรรมราช และรูปปั้นโบราณชนิดต่างๆ อาทิ คนธรรพ์บรรเลงดนตรี รูปพญานาค ของช่างเมืองเพชร </p>
         <p>&emsp;ส่วนชั้นใต้ดินที่เรียกว่า "ชั้นบาดาล"เป็นที่จัดแสดงนิทรรศการและโบราณวัตถุจำนวนมาก อาทิ พระพุทธรูปเทวรูปสมัยต่าง ๆ และเครื่องลายครามของจีนระเบียงรอบนอกตัวอาคารประกอบด้วยซุ้มแปดซุ้มรอบพิพิธภัณฑ์เป็นอุทยานพรรณไม้ในวรรณคดีและพันธุ์ไม้หายากจากทุกภูมิภาคของประเทศมีงานประติมากรรมลอยตัวเรื่องรามเกียรติ์ วางเรียงรายล้อมรอบอาคาร</p><br>
         <img style="border-radius:10px;margin-bottom:50px;margin-top:20px" src="banner2.jpg" width="1000" height="400">
-        <div id="warp1" class="warp"></div>
-        <video id="video1" class="video-fluid hoverable" onmouseover="this.play()" onmouseout="this.pause()" poster="../../Res/thumbnail.jpg">
-            <source src="https://drive.google.com/uc?export=download&id=1sIDf5Bdek8TF3HVCEcnOZAziebyDqoZh" type="video/mp4" />
-        </video>
         <div id="warp2" class="warp"></div>
         <div id="Info">
             <p><b>เวลาทำการ:</b><br>

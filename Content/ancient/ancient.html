@@ -40,7 +40,17 @@
             }  // End if
           });
         });
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
     </script>
+
 
 </head>
 <body>
@@ -63,28 +73,28 @@
         </div>
     </div>
     <!-- Page Content -->
-    <nav class="navbar navbar-inverse red lighten-1 navbar-fixed-top hoverable">
-        <!--<div class="container-fluid">-->
-            <!--<div class="navbar-header">-->
+    <nav id="navbar" class="navbar navbar-inverse red lighten-1 navbar-fixed-top hoverable">
                 <a class="navbar-brand white-text w3-xxlarge" href="../../index.html"><b>&emsp;&emsp;Sumut Prakan&emsp;&emsp;</b></a>
             <!--</div>-->
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav nav-pills">
+                        <li><a class="white-text hoverable w3-xlarge active" href="#cover-ancient">VDO</a></li>
                         <li><a class="white-text hoverable w3-xlarge" href="#warp0">สถานที่</a></li>
-                        <li><a class="white-text hoverable w3-xlarge" href="#warp1">VDO</a></li>
                         <li><a class="white-text hoverable w3-xlarge" href="#warp2">Information</a></li>
                         <li><a class="white-text hoverable w3-xlarge" href="#warp3">Map</a></li>
                     </ul>
                 </div>
-        <!--</div>-->
     </nav>
     <button id="openNav" style="visibility: visible;" class="w3-button info-color w3-xlarge" onclick="myOpen()">☰</button>
     <div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
-    <div class="w3-display-container w3-margin-bottom mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
+    <div class="w3-display-container mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
                                                             src="../../Res/cover-anc.jpg">
         <div align="center" class="header w3-display-middle"><b>เมืองโบราณ</b></div>
     </div>
     <div id="container">
+        <video id="video1" class="video-fluid hoverable" onmouseover="this.play()" onmouseout="this.pause()" poster="../../Res/thumbnail.jpg">
+            <source src="https://drive.google.com/uc?export=download&id=1BN-RZqevykE5X3QvesEOjuOfbUY2IEp_" type="video/mp4" />
+        </video>
         <div id="warp0" style="margin-bottom:60px;"></div>
         <img id="pic1" src="y9.jpg"><br>
         <div id="section1">
@@ -105,10 +115,10 @@
             <img src="y13.jpg"><br><img style="margin-bottom: 40px;" src="bup_1.jpg">
             <p>&emsp;สำหรับใครที่ติดตามละครเรื่องบุพเพสันนิวาส จะรู้เลยว่า "เมืองโบราณ" ถูกใช้เป็นหนึ่งในสถานที่ถ่ายทำสำคัญในละคร โดยใช้ใช้ตลาดน้ำของเมืองโบราณเป็นสถานที่ถ่ายทำ ฉากที่คุณพี่หมื่นพาแม่หญิงการะเกดมาชมตลาดในสมัยอยุธยานั่นเอง ใครอยากล่องเรือเที่ยวเหมือนแม่การะเกด ก็มาล่องเรือได้ที่โซนตลาดน้ำ จะมีบริการพานั่งเรือชมตลาดน้ำ ชมบ้านเรือนสองฟากฝั่งแม่น้ำ เหมือนกับในละครเลยครับ</p><br>
         </div>
-        <div id="warp1" class="warp"></div>
-            <video id="video1" class="video-fluid hoverable" onmouseover="this.play()" onmouseout="this.pause()" poster="../../Res/thumbnail.jpg">
-                <source src="https://drive.google.com/uc?export=download&id=1BN-RZqevykE5X3QvesEOjuOfbUY2IEp_" type="video/mp4" />
-            </video>
+        <!--<div id="warp1" class="warp"></div>-->
+            <!--<video id="video1" class="video-fluid hoverable" onmouseover="this.play()" onmouseout="this.pause()" poster="../../Res/thumbnail.jpg">-->
+                <!--<source src="https://drive.google.com/uc?export=download&id=1BN-RZqevykE5X3QvesEOjuOfbUY2IEp_" type="video/mp4" />-->
+            <!--</video>-->
         <div id="warp2" class="warp"></div>
         <div id="Info">
             <p><b>เวลาทำการ:</b><br>
