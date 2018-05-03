@@ -311,8 +311,11 @@
         border-radius: 7px;
         transition: transform .2s;
         margin: auto;
+        margin-left: 60px;
         margin-bottom: 50px;
-        display: block;
+        display: inline-block;
+        /*float: left;*/
+        position:relative;
     }
 
     .card:hover {
@@ -327,10 +330,18 @@
         text-align:center;
         font-family: 'WRTishkid';
         font-size: 24px;
+        position:relative;
     }
 
     .back {
+        position: table;
         background: url("3.1.jpg");
         width: 100%;
         background-size: cover;
+        text-align: center;
+    }
+
+    .clearfix{
+        display:table;
+        clear:both;
     }
