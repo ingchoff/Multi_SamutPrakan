@@ -3,8 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>About US</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../Res/style.css">
+    <script src="../../Res/myscripts.js"></script>
 </head>
 <body>
-
+<!-- Sidebar -->
+<button id="openNav" style="visibility: visible;" class="w3-button w3-white w3-xlarge" onclick="myOpen()">☰</button>
+<div class="w3-overlay w3-animate-opacity" onclick="myClose()" style="cursor:pointer" id="myOverlay"></div>
+<div class="w3-sidebar w3-bar-block w3-animate-left w3-row" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-sand text-center" onclick="myClose()">Close &times;</button>
+    <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-home"> Home</i></a><br>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white w3-xlarge w3-text-orange"><i class="fa fa-male"> About Us</i></a><br>
+    <div class="w3-dropdown-hover w3-bar-block">
+        <a class="w3-margin-left w3-text-orange w3-xlarge">สถานที่ท่องเที่ยว
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="w3-dropdown-content w3-bar-block w3-hover-white w3-large w3-margin-left">
+            <a href="../Erawan/era.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">พิพิธภัณฑ์ช้างเอราวัณ
+            </a>
+            <a href="../Croc/croc.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">ฟาร์มจรเข้</a>
+            <a href="../ancient/ancient.html" class="w3-bar-item w3-button w3-hover-light-blue w3-large">เมืองโบราณ
+            </a>
+        </div>
+    </div>
+</div>
+<div class="w3-display-container mask grey darken-3"><img id="cover-ancient" class="img-thumbnail"
+                                                                           src="../../Res/cover-anc.jpg">
+    <div align="center" class="header w3-display-middle"><b>About US</b></div>
+</div>
+<div class="back"><br><br>
+        <div class="card">
+            <img src="ing.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <p><b><br>อิงครัต  ทินกรศรีสุภาพ</b></p>
+                <p>60070119</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="Avatar" style="width:100%">
+            <div class="container">
+                <p><b><br>พากร</b></p>
+                <p>600700</p>
+            </div>
+        </div>
+</div>
 </body>
 </html>
