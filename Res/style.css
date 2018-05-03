@@ -260,7 +260,7 @@
 
         /*config FirstPage*/
         .carousel-inner img {
-                    height: 720px;
+                    height: 1000px;
                     margin: 20px auto;
                     display: block;
                     border-radius: 20px;
@@ -370,7 +370,7 @@
     .parallax2 {
         background-image: url('3.jpg');
         /* Full height */
-        height: 800px;
+        min-height: 1080px;
 
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
@@ -406,7 +406,7 @@
     .parallax5 {
         background-image: url('../Content/Bird/15.jpg');
             /* Full height */
-            height: 800px;
+            min-height: 1080px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -442,7 +442,7 @@
     .parallax8 {
         background-image: url('../Content/Croc/para1.jpg');
             /* Full height */
-            height: 800px;
+            min-height: 1080px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -478,7 +478,7 @@
     .parallax11 {
         background-image: url('../Content/Erawan/para1.jpg');
             /* Full height */
-            min-height: 800px;
+            min-height: 1080px;
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -510,8 +510,4 @@
     .myImg:hover {
         opacity: 0.8;
         transform: scale(1.05);
-    }
-
-    #logo {
-        max-width: 150px;
     }
